@@ -20,8 +20,17 @@ weatherForm.addEventListener("submit", (e)=>{
             }
             else
             {
-                msg1.textContent = "Weather for " + data.location
-                msg2.textContent = "It is " + data.temperature + " degrees but feels like " + data.feelslike + "."
+                msg1.textContent = "It is currently " + data.condition + " in " + data.location + "."
+                let msg = "It is " + data.temperature
+                if(data.temperature !== data.feelslike)
+                {
+                    msg = msg + " degrees but feels like " + data.feelslike + "."
+                }
+                else
+                {
+                    msg = msg + " degrees."
+                }
+                msg2.textContent = msg
             }
         })
     })
