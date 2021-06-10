@@ -10,7 +10,7 @@ weatherForm.addEventListener("submit", (e)=>{
     msg2.textContent = ""
 
     const location = search.value
-    const url = './weather?search='+location 
+    const url = '/weather?search='+location 
 
     fetch(url).then((response)=>{
         response.json().then((data)=>{
